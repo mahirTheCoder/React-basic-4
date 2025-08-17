@@ -3,23 +3,33 @@ import React, { useState } from 'react'
 const Home = () => {
 
 
-  const [alu, setAlu] = useState ('this is me first peramitter')
+  const [Showitems, setshowItems] = useState (false)
 
+ console.log(Showitems)
 
+  if(Showitems){
+    
+  }
 
-// console.log(alu)
-
-
-
-
-const handleButton = (data)=>{
-  console.log(data)
+const hnadlebutton = ()=>{
+  
 }
 
   return (
     <>
-    <h1>{alu}</h1>
-    <button onClick={handleButton('data transfar way')}>show me</button>
+
+    <div className="container pt-5">
+
+    {
+      Showitems?
+      <h1>Part one</h1>
+      :
+      <h1>Part two</h1>
+
+    }
+    <button onClick={hnadlebutton} >Changes</button>
+    </div>
+    
     </>
   )
 }
