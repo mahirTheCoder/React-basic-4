@@ -1,4 +1,8 @@
 import React, { useState } from 'react'
+import { FaEye } from "react-icons/fa6";
+import { FaEyeSlash } from "react-icons/fa";
+
+
 
 const Home = () => {
 
@@ -20,9 +24,11 @@ const hnadlebutton = ()=>{
 
       {
         Showitems?
-        <button onClick={()=> setshowItems (false)} >hide</button> 
+        <button onClick={()=> setshowItems (false)} ><FaEyeSlash />
+</button> 
         :
-        <button onClick={()=> setshowItems (true)} >show</button>
+        <button onClick={()=> setshowItems (true)} ><FaEye />
+</button>
 
       }
     </div>
